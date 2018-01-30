@@ -1,0 +1,48 @@
+{
+  "name": "auth-service",
+  "version": "0.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "tape src/**/__test__/*.spec.js",
+    "lint": "eslint ./src",
+    "release:major": "npm version major && git push --follow-tags",
+    "release:minor": "npm version minor && git push --follow-tags",
+    "release:patch": "npm version patch && git push --follow-tags"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "crypto-js": "3.1.9-1",
+    "express": "4.16.2",
+    "jwt-simple": "0.5.1",
+    "moment": "2.20.1",
+    "mongodb": "3.0.1",
+    "morgan": "1.9.0",
+    "simple-logger-cornerjob": "1.0.1",
+    "winston": "2.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-cornerjob": "1.0.4",
+    "proxyquire": "1.8.0",
+    "sinon": "4.2.2",
+    "tape": "4.8.0"
+  },
+  "description": "",
+  "eslintConfig": {
+    "extends": "eslint-config-cornerjob",
+    "env": {
+      "es6": true
+    },
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 8
+    },
+    "rules": {
+      "promise/prefer-await-to-then": 1,
+      "promise/avoid-new": 0
+    }
+  }
+}

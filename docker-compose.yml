@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  auth-ms:
+    build:
+      context: .
+      args:
+        BUILD_ENV: $NODE_ENV
+    environment:
+      PORT: 3588
+      MONGO_URL: $MONGO_URL
+      MONGO_DATABASE: $MONGO_DATABASE
+      SECRET: $SECRET
+      JWT_SECRET: $JWT_SECRET
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3588:3588
+
+networks:
+  default:
+    external:
+      name: development

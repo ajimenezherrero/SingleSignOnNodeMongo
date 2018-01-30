@@ -1,0 +1,10 @@
+# Global
+export NODE_ENV="development"
+export SECRET="authSecret"
+
+# MongoDB
+export MONGO_URL="mongodb://mongo/dev"
+export MONGO_DATABASE="auth"
+
+# Jwt
+export JWT_SECRET="SimplySecretForJwt"
